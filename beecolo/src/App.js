@@ -1,22 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import Conseils from './pages/Conseils';
-import Simulateur from './pages/Simulateur';
-import Contacts from './pages/Contacts';
+import './App.css'
+import Header from './components/Header';
+import Main from './components/Main';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/conseils" element={<Conseils />} />
-        <Route path="/simulateur" element={<Simulateur />} />
-        <Route path="/contacts" element={<Contacts />} />
-      </Routes>
-    </div>
+    <>
+      <Header />
+      <Main />
+    </>
   );
 }
-
-export default App;
