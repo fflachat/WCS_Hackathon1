@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 ul {
     list-style: none;
 }
@@ -5,6 +7,13 @@ ul {
 .all {
     display: flex;
     flex-wrap: nowrap;
+  }
+  
+.title {
+    color: yellow;
+    margin-left: 1vh;
+    font-size: 3vh;
+    font-family: 'Expletus Sans';
   }
   
   .navbar_links:hover {
@@ -36,7 +45,7 @@ ul {
     justify-content: space-between;
     width: 100%;
     padding: 1vh;
-    background-color: red;
+    background-color: rgb(17, 59, 17);
     z-index: 10000;
   }
   
@@ -47,9 +56,8 @@ ul {
   
   .navbar_link {
     padding: 0 0.3rem;
-    color: black;
+    color: white;
     font-size: 1.5rem;
-    font-family: 'Permanent Marker', cursive;
     margin-left: 20px;
   }
   
@@ -61,8 +69,15 @@ ul {
     color: inherit;
     display: none;
   }
+
+  .bee {
+      display: none;
+  }
   
   @media screen and (max-width: 700px) {
+      .title {
+          margin-top: 1vh;
+      }
     .navbar_logo {
       display: flex;
       margin-right: 150px;
@@ -78,14 +93,15 @@ ul {
       height: 100vh;
       padding: 2rem;
       visibility: hidden;
-      color: black;
-      background-color: red;
+      color: white;
+      background-color: rgb(17, 59, 17);
     }
   
     .show-nav .navbar_links {
       width: 100vw;
       right: 0;
       visibility: visible;
+  
     }
   
     .navbar_items:last-child::after {
@@ -95,7 +111,8 @@ ul {
     .navbar_link {
       display: block;
       padding: 1.5rem;
-      font-size: 5vw;
+      font-size: 8vw;
+      margin-left: 10vh;
     }
   
     .navbar_burger {
@@ -113,7 +130,7 @@ ul {
       height: 3px;
       position: relative;
       border-radius: 3px;
-      background-color: black;
+      background-color: yellow;
       transition: all 0.5s ease-in-out;
     }
   
@@ -144,5 +161,9 @@ ul {
     .show-nav .burger_bar::after {
       transform: rotate(-45deg);
       position: fixed;
+    }
+    .bee {
+        margin-top: 5vh;
+        margin-left: 10vh;
     }
   }

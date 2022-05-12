@@ -16,8 +16,8 @@ export default function Header() {
         <div className="navbar_logo">
           <Link to="/">
             <div className="container">
-              <img className="logo" alt="" src="/bee.png" />
-              <h1>Beecolo</h1>
+              <img className="logo" alt="bee" src="/bee.png" />
+              <h1 className='title'>Beecolo</h1>
             </div>
           </Link>
         </div>
@@ -64,6 +64,8 @@ export default function Header() {
               Conseils
             </NavLink>
           </li>
+          <img className="bee" alt="bee" src="/bee.png" />
+
         </ul>
         <button
           type="button"
