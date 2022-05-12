@@ -3,7 +3,7 @@ import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
 
 const getActiveLinkStyle = ({ isActive }) => {
-  if (isActive) return { color: 'yellow' };
+  if (isActive) return { color: '#FFC700' };
 };
 export default function Header() {
   const [showLinks, setShowLinks] = useState(false);
