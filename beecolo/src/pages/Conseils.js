@@ -1,5 +1,5 @@
+import React from 'react';
+
 export default function Conseils() {
-    return (
-        <div>Coucou</div>
-    )
+  return <div>Conseils</div>;
 }
