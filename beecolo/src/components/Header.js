@@ -11,13 +11,12 @@ export default function Header() {
     setShowLinks(!showLinks);
   };
   return (
-    <nav className="all">
       <nav className={`navbar ${showLinks ? 'show-nav' : 'hide-nav'}`}>
         <div className="navbar_logo">
           <Link to="/">
-            <div className="container">
+            <div className="headerContainer">
               <img className="logo" alt="bee" src="/bee.png" />
-              <h1 className='title'>Beecolo</h1>
+              <h1 className='headerTitle'>Beecolo</h1>
             </div>
           </Link>
         </div>
@@ -75,6 +74,5 @@ export default function Header() {
           <span className="burger_bar" />
         </button>
       </nav>
-    </nav>
   );
 }

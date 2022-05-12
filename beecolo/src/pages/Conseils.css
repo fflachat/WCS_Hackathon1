@@ -1,0 +1,32 @@
+.conseilsBoxes {
+    text-align: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.conseilsTitle {
+    font-size: 3vh;
+    font-weight: bold;
+    margin-bottom: 5vh;
+    margin-top: 1vh;
+}
+
+.conseilsHover {
+    cursor: pointer;
+    font-size: 3vh;
+}
+
+.show {
+    display: initial;
+}
+
+.hide {
+    display: none;
+}
+
+.conseilsItems {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
