@@ -4,10 +4,7 @@ export default function LogementInfos() {
   return (
     <form>
       <h3>Informations sur votre logement</h3>
-      <div className="CP">
-        <label htmlFor="CP">CP</label>
-        <input type="text" id="CP" name="CP" />
-      </div>
+    
       <div className="year">
         <label htmlFor="year">Année de construction (AAAA)</label>
         <input type="text" id="year" name="year" />
