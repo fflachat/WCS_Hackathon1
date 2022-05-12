@@ -31,8 +31,6 @@ export default function Simulateur() {
       <button type="button" onClick={switchQuestion}>
         Suivant
       </button>
-
-      <MapEspaceRenov />
     </div>
   );
 }
