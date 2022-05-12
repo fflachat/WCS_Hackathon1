@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function LogementInfos() {
   return (
-    <div>
+    <form>
       <h3>Informations sur votre logement</h3>
       <div className="CP">
         <label htmlFor="CP">CP</label>
@@ -17,9 +17,14 @@ export default function LogementInfos() {
         <input type="number" id="surface" name="surface" />
       </div>
       <div className="energy">
-        <label htmlFor="energy">Type d'énergie utilisé</label>
-        <input type="text" id="energy" name="energy" />
+        <label htmlFor="energy">Energie :</label>
+        <select name="energy" id="energy_select">
+          <option value="">----</option>
+          <option value="wood">Bois</option>
+          <option value="electric">Electrique</option>
+          <option value="fuel">Fioul</option>
+        </select>
       </div>
-    </div>
+    </form>
   );
 }
