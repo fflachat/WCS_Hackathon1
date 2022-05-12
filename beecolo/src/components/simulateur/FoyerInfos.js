@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function FoyerInfos() {
   return (
-    <div>
+    <form>
       <h3>Informations sur votre foyer</h3>
       <div className="Nombre de personne">
         <label htmlFor="nb">Nb</label>
@@ -10,7 +10,7 @@ export default function FoyerInfos() {
       </div>
       <div className="fisc">
         <label htmlFor="fisc">Part Fiscal</label>
-        <input type="text" id="fisc" name="fisc" />
+        <input type="number" id="fisc" name="fisc" />
       </div>
       <div className="statut">
         <label htmlFor="proprio"> Propriétaire </label>
@@ -19,9 +19,9 @@ export default function FoyerInfos() {
         <input type="checkbox" id="loc" name="loc" />
       </div>
       <div className="revenue">
-        <label htmlFor="revenue"> </label>
+        <label htmlFor="revenue">Revenue</label>
         <input type="number" id="revenue" name="revenue" />
       </div>
-    </div>
+    </form>
   );
 }
