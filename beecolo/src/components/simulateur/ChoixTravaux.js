@@ -37,7 +37,7 @@ export default function ChoixTravaux() {
       </select>
 
       <div className={styles.CP}>
-        <label htmlFor="CP">Code Postal</label>
+        <label htmlFor="CP">Département</label>
         <input
           className={styles.CPinput}
           type="number"
