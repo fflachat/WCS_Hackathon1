@@ -7,6 +7,7 @@ import Logement from '../components/simulateur/Logement';
 import Dispositif from '../components/simulateur/Dispositif';
 import styles from './Simulateur.module.css';
 import CoutTravaux from '../components/simulateur/CoutTravaux';
+import background from '../components/assets/flowersBee.jpg';
 
 export default function Simulateur() {
   const [questionIndex, setQuestionIndex] = useState(1);
@@ -16,7 +17,13 @@ export default function Simulateur() {
   };
 
   return (
-    <div className={styles.simulateur}>
+    <div className={styles.simulateur}
+    style={{
+      backgroundImage: `url(${background})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}>
       <h1 className={styles.title}>Simulateur</h1>
       {questionIndex < 2 && (
         <p className={styles.explication}>
