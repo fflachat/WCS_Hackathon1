@@ -1,0 +1,32 @@
+.questionCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 60vh;
+    border: solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.2);;
+    text-align: center;
+}
+
+.travaux {
+    width: 90%;
+    color: #19381F;
+    font-size: 2vh;
+}
+
+.CP {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CPinput {
+    border: 0.1rem black solid;
+    text-align: center;
+}

@@ -1,0 +1,26 @@
+.questionCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 60vh;
+    border: solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.cardButton {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 20px;
+    color:#19381F;
+    background-color: #FFC700;
+    border: 0.2rem solid #19381F;
+}
+
+.cardButton:focus {
+    color: #FFC700;
+    background-color: #19381F;
+    font-weight: bolder;
+}

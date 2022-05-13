@@ -1,0 +1,25 @@
+.simulateur {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 0;
+    color: white;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: -6vh;
+}
+
+.explication {
+    text-align: center;
+    margin-bottom: -5vh;
+}
+
+.next {
+    margin-top: 0;
+}

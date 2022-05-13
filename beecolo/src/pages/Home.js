@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
   <div className="homeContainer">
-    <h1 className="homeTitle">Bienvenue sur Beecolo</h1>
+    <h1 className="homeTitle">Bienvenue sur Beecolo!</h1>
     <p className="homeText">Qui a dit qu'écologie ne pouvait rimer avec économie? 
     Sur cette application vous allez pouvoir retrouver les infos qu'il vous faut afin 
     de rénover votre maison ce qui permettra d'aider à sauvegarder la planète et votre 
