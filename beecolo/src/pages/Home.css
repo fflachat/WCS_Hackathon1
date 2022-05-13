@@ -1,0 +1,68 @@
+.homeContainer {
+    text-align: center;
+    padding-top: 2vh;
+    color: #19381F;
+}
+
+.homeTitle {
+    font-size: 3vh;
+    font-weight: bold;
+    margin-bottom: 4vh;
+}
+
+.homeText {
+    font-size: 2.3vh;
+}
+
+.house {
+    margin-top: 8vh;
+    margin-bottom: 3vh;
+}
+
+.homeSlogan {
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.windowButton{
+    background-color: yellow;
+    color: yellow;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50px;
+    position: relative;
+    top:-25vh;
+    right: -20vh;
+}
+
+.doorButton{
+    background-color: yellow;
+    color: yellow;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50px;
+    position: relative;
+    top: -20vh;
+    right: -17vh;
+}
+
+.wallButton{
+    background-color: yellow;
+    color: yellow;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50px;
+    position: relative;
+    top: -20vh;
+    right: 13vh;
+}
+
+.atticButton{
+    background-color: yellow;
+    color: yellow;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50px;
+    position: relative;
+    top: -33vh;
+}
