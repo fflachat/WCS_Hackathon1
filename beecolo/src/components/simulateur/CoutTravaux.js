@@ -7,12 +7,13 @@ import { TravauxList } from '../../ressource/TravauxList';
 
 const avg = (array) => {
   let sum = 0;
+  let nullCompt = 0;
   for (let i = 0; i < array.length; i += 1) {
-    if (!isNaN(parseInt(array[i].prix_total)))
+    if (!isNaN(parseInt(array[i].prix_total))) {
       sum += parseInt(array[i].prix_total);
+    } else nullCompt += 1;
   }
-
-  return Math.floor(sum / array.length);
+  return Math.floor(sum / (array.length - nullCompt));
 };
 
 export default function CoutTravaux() {
@@ -40,15 +41,17 @@ export default function CoutTravaux() {
       )
       .then((cpList) => setprestationList(cpList));
 
-    console.log(prestationList);
-
     setAveragePrice(avg(prestationList));
-  }, [cp, selectedTravaux]);
+  }, [cp, prestationList, selectedTravaux]);
 
   return (
     <div className={styles.questionCard}>
       <h3> Cette préstation vous coutera en moyenne </h3>
-      <h2 className="text-[50px] text-center">{averagePrice} euros</h2>
+      {!isNaN(averagePrice) ? (
+        <h2 className="text-[50px] text-center">{averagePrice} euros</h2>
+      ) : (
+        <h2> Chargement </h2>
+      )}
       <h3> dans votre secteur pour {selectedTravaux}</h3>
       <h3>
         {' '}
