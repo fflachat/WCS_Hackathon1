@@ -1,6 +1,5 @@
 .conseilsBoxes {
     text-align: center;
-    position: fixed;
     height: 100%;
     width: 100%;
     color: white;
@@ -10,7 +9,6 @@
     font-size: 3vh;
     font-weight: bold;
     margin-bottom: 5vh;
-    margin-top: 1vh;
 }
 
 .conseilsHover {
@@ -29,4 +27,8 @@
 .conseilsItems {
     margin-top: 2vh;
     margin-bottom: 1vh;
+}
+
+.conseilsItems:hover {
+    color: yellow;
 }

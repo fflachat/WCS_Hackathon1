@@ -2,7 +2,6 @@
     color: #FFC700;
     margin-left: 1vh;
     font-size: 3vh;
-    font-family: 'Expletus Sans';
   }
   
   .navbar_links:hover {
@@ -34,7 +33,7 @@
     width: 100%;
     padding: 1vh;
     background-color: #19381F;
-    z-index: 10000;
+    z-index: 1;
   }
   
   .navbar_links {

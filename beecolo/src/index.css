@@ -3,13 +3,23 @@
 @tailwind utilities;
 
 
-body {
+html,
+body,
+#root {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main {
+  flex-grow: 1;
 }
 
 .leaflet-container {
