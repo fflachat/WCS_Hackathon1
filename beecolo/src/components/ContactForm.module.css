@@ -1,0 +1,43 @@
+input,
+textarea {
+  border-radius: 20px;
+  padding: 1vh;
+  width: 100%;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+textarea {
+    width: 100%;
+}
+
+textarea::placeholder {
+  text-align: center;
+}
+
+:placeholder-shown {
+  border-color: silver;
+}
+
+.submitBtn {
+  margin-bottom: 5%;
+  background-color: yellow;
+  border-radius: 20px;
+  border: 2px solid #19381F;
+  height: 6vh;
+  width: 20vh;
+  font-weight: bold;
+  font-size: 3vh;
+  cursor: pointer;
+  color: #19381F;
+  margin-left: 9vh;
+}
+
+@media screen and (min-width: 700px) {
+  .submitBtn {
+    margin-top: 5vh;
+    margin-right: 9vh;
+  }
+}

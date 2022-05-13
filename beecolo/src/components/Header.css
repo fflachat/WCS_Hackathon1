@@ -1,26 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-ul {
-    list-style: none;
-}
-
-.all {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  
-.title {
+.headerTitle {
     color: #FFC700;
     margin-left: 1vh;
     font-size: 3vh;
-    font-family: 'Expletus Sans';
   }
   
   .navbar_links:hover {
     cursor: pointer;
   }
   
-  .container {
+  .headerContainer {
     display: flex;
     align-items: flex-start;
     height: auto;
@@ -34,28 +22,28 @@ ul {
   }
   
   .logo {
-    height: 50px;
+    height: 45px;
     width: 50px;
   }
   
   .navbar {
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 1vh;
     background-color: #19381F;
-    z-index: 10000;
+    z-index: 1;
   }
   
   .navbar_links {
     display: flex;
-    justify-content: flex-start;
-    padding: 0 0.3rem;
     color: white;
     font-size: 1.5rem;
-    margin-left: 20px;
+  }
+
+  .navbar_link {
+    margin-right: 10vh;
   }
   
   .navbar_burger {
@@ -72,9 +60,11 @@ ul {
   }
   
   @media screen and (max-width: 700px) {
-      .title {
-          margin-top: 1vh;
-      }
+    
+    .navbar_link {
+      margin-left: 10vh;
+    }
+
     .navbar_logo {
       display: flex;
       margin-right: 150px;
@@ -165,7 +155,7 @@ ul {
       position: fixed;
     }
     .bee {
-        margin-top: 5vh;
-        margin-left: 10vh;
+      display: initial;
+        margin-top: 10vh;
     }
   }
