@@ -25,12 +25,12 @@ function ContactForm() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-   emailjs.sendForm(
+    emailjs.sendForm(
       process.env.REACT_APP_YOUR_SERVICE_ID,
       process.env.REACT_APP_YOUR_TEMPLATE_ID,
       form.current,
       process.env.REACT_APP_YOUR_PUBLIC_KEY
-    ); 
+    );
 
     toast(
       'Merci de votre partage, nous reviendrons vers vous le plus rapidement possible !',

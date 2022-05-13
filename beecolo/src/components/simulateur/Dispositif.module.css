@@ -1,0 +1,12 @@
+.dispoList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.card {
+    border: 1rem solid black;
+    border-radius: 20px;
+}

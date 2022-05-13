@@ -32,10 +32,14 @@ export default function Simulateur() {
       <Button
         className={styles.next}
         variant="contained"
-        onClick={switchQuestion}
+        onClick={
+          questionIndex !== 4
+            ? switchQuestion
+            : () => (document.location.href = '/contacts')
+        }
         endIcon={<SendIcon />}
       >
-        Suivant
+        {questionIndex === 4 ? 'En savoir plus' : 'Suivant'}
       </Button>
     </div>
   );

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import useLocalStorage from 'use-local-storage';
 import DispoCard from './DispoCard';
+import styles from './Dispositif.module.css';
 
 const convertIdList = (idList) => {
   const uniList = [...new Set(idList)];
@@ -29,35 +30,38 @@ export default function Dispositif() {
       )
       .then((res) => res.data.results)
       .then((results) => results.map((r) => r.id_dispositif))
-      .then((list) => setIdDispoList(list))
-      .then(() => {
-        axios
-          .get(
-            `https://data.ademe.fr/data-fair/api/v1/datasets/simul'aideuros-dispositifs-perimetres-geographiques/lines?format=json&q_mode=simple&qs=code_departement%3A${cp}&size=100&sampling=neighbors`
-          )
-          .then((res) => res.data.results)
-          .then((results) => results.map((r) => r.id))
-          .then((idList) => setIdDispoList(idList))
-          .then(() => {
-            const arg2 = convertIdList(idDispoList);
+      .then((list) => setIdDispoList(list));
 
-            axios
-              .get(
-                `https://koumoul.com/data-fair/api/v1/datasets/simul%27aideuros-dispositifs/lines?format=json&q_mode=simple&qs=id%3A${arg2}&size=100&&sampling=neighbors`
-              )
-              .then((res) => res.data.results)
-              .then((results) => results.map((r) => r.id))
-              .then((results) => setDispositifList([...new Set(results)]));
-          });
+    axios
+      .get(
+        `https://data.ademe.fr/data-fair/api/v1/datasets/simul'aideuros-dispositifs-perimetres-geographiques/lines?format=json&q_mode=simple&qs=code_departement%3A${cp}&size=100&sampling=neighbors`
+      )
+      .then((res) => res.data.results)
+      .then((results) => results.map((r) => r.id))
+      .then((idList) => setIdDispoList(idList));
+
+    const arg2 = convertIdList(idDispoList);
+
+    axios
+      .get(
+        `https://koumoul.com/data-fair/api/v1/datasets/simul%27aideuros-dispositifs/lines?format=json&q_mode=simple&qs=id%3A${arg2}&size=100&&sampling=neighbors`
+      )
+      .then((res) => res.data.results)
+      .then((results) => results.map((r) => r.id))
+      .then((results) => {
+        const uniqueResult = [...new Set(results)];
+        setDispositifList(uniqueResult);
       });
   }, [cp]);
 
   return (
     <div>
       <h3> Voici les dispositifs existants pour votre situation :</h3>
-      {dispositifList.map((d) => {
-        return <DispoCard dispoId={d} />;
-      })}
+      <div className={styles.dispoList}>
+        {dispositifList.map((d) => {
+          return <DispoCard className={styles.card} key={d} dispoId={d} />;
+        })}
+      </div>
     </div>
   );
 }
