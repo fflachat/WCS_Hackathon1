@@ -59,7 +59,7 @@ export default function Dispositif() {
       <h3> Voici les dispositifs existants pour votre situation :</h3>
       <div className={styles.dispoList}>
         {dispositifList.map((d) => {
-          return <DispoCard className={styles.card} key={d} dispoId={d} />;
+          return <DispoCard key={d} dispoId={d} />;
         })}
       </div>
     </div>

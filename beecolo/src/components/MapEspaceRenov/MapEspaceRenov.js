@@ -30,7 +30,7 @@ export default function MapEspaceRenov() {
 
   return (
     <div>
-      <LeafletMap center={position} zoom="12" scrollWheelZoom={false}>
+      <LeafletMap center={position} zoom="8" scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

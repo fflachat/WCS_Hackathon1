@@ -46,18 +46,23 @@ export default function CoutTravaux() {
 
   return (
     <div className={styles.questionCard}>
-      <h3> Cette préstation vous coutera en moyenne </h3>
+      <h3>
+        {' '}
+        Dans votre département, la prestation :{' '}
+        <span className={styles.presta}>{selectedTravaux}</span>, est en moyenne
+        facturée :
+      </h3>
       {!isNaN(averagePrice) ? (
         <h2 className="text-[50px] text-center">{averagePrice} euros</h2>
       ) : (
         <h2> Chargement </h2>
       )}
-      <h3> dans votre secteur pour {selectedTravaux}</h3>
-      <h3>
+      <p>
         {' '}
-        Cela vous semble beaucoup ? Heureusement, il existe des aides pour
-        réduire la facture, et contribuer à la transition écologique{' '}
-      </h3>
+        Pour réduire la facture, il existe des aides ! Renseignez vous et
+        contribuer à la transition écologique tout en préservant votre
+        portefeuille !{' '}
+      </p>
     </div>
   );
 }

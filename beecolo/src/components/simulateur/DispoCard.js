@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect, useState } from 'react';
 import useLocalStorage from 'use-local-storage';
+import styles from './Dispositif.module.css';
 
 export default function DispoCard({ dispoId }) {
   const [dispositif, setDispositif] = useLocalStorage('dispositifs', '');
@@ -26,10 +27,11 @@ export default function DispoCard({ dispoId }) {
   return (
     <div>
       {!isLoading && (
-        <div>
-          <h2 onClick={() => setDisplayDescription(!displayDescription)}>
-            {dispositif.intitule}
-          </h2>
+        <div
+          className={styles.card}
+          onClick={() => setDisplayDescription(!displayDescription)}
+        >
+          <h2>{dispositif.intitule}</h2>
           {displayDescription && <p>{dispositif.descriptif}</p>}
         </div>
       )}
