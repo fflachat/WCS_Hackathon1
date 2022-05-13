@@ -23,7 +23,7 @@ textarea::placeholder {
 
 .submitBtn {
   margin-bottom: 5%;
-  background-color: yellow;
+  background-color: #FFC700;
   border-radius: 20px;
   border: 2px solid #19381F;
   height: 6vh;

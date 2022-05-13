@@ -9,10 +9,14 @@
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
+    background-color: rgba(0, 0, 0, 0.2);;
+    text-align: center;
 }
 
 .travaux {
     width: 90%;
+    color: #19381F;
+    font-size: 2vh;
 }
 
 .CP {
